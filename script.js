@@ -18,7 +18,7 @@ const getRandomEmployee = function(employeesArray) {
 
 /*
   ====================
-  STARTER CODE
+  STARTER CODE 2
   Do not modify any of the code below this line:
 */
 
