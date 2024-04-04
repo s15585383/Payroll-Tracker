@@ -1,12 +1,11 @@
 
 // Get a reference to the #add-employees-btn element
 const addEmployeesBtn = document.querySelector('#add-employees-btn');
-
+const employeeRoster = [];
 // Collect employee data
 const collectEmployees = function() {
 // prompt for first name variable to store into ma
 
-const employeeRoster = [];
 
 let addEmployees = true;
 
@@ -20,7 +19,7 @@ while (addEmployees) {
   if (isNaN(salary)) {
     alert("Value entered is not a number");
     salary = Number(prompt("Employee salary"));
-  }
+  };
 
 // generate employee variable based on prompts
 let employee = {
@@ -30,13 +29,15 @@ let employee = {
 };
 
 // push employee info into predefined array
-employeeRoster.push(employee);
+employeeRoster.push(employee)
 
 // add conditional statement for prompt for new employee
-addEmployees = confirm("Add new scrub");
+const continueAdding = confirm("Add new scrub");
+addEmployees = continueAdding
 }
 // return roster data
 return employeeRoster;
+
 
 }
   // TODO: Get user input to create and return an array of employee objects
@@ -48,8 +49,12 @@ const displayAverageSalary = function(employeesRoster) {
   let totalSalarySum = 0;
   for (let i = 0; i < employeesRoster.length; i++) {
     totalSalarySum += employeesRoster[i].salary;
-
   }
+
+const salaryAvg = totalSalarySum / employeesRoster.length;
+console.log(`Average of employee salary: ${salaryAvg}`);
+return salaryAvg;
+
 }
 
 
