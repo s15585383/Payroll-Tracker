@@ -1,22 +1,27 @@
+
 // Get a reference to the #add-employees-btn element
 const addEmployeesBtn = document.querySelector('#add-employees-btn');
 
 // Collect employee data
 const collectEmployees = function() {
 // prompt for first name variable to store into ma
+
 const employeeRoster = [];
-let addEmployees = true
+
+let addEmployees = true;
+
 while (addEmployees) {
+
   // prompt for employee roster addition
   const firstName = prompt("Employee first name");
   const lastName = prompt("Employee last name");
-  const salary = Number(prompt ("Employee salary"));
+  let salary = Number(prompt("Employee salary"));
 
   if (isNaN(salary)) {
-    alert("Value entered is not a number")
-    salary = Number(prompt ("Employee salary"))
+    alert("Value entered is not a number");
+    salary = Number(prompt("Employee salary"));
   }
-}
+
 // generate employee variable based on prompts
 let employee = {
   firstName: firstName,
@@ -25,11 +30,11 @@ let employee = {
 };
 
 // push employee info into predefined array
-employeeRoster.push (employee);
+employeeRoster.push(employee);
 
 // add conditional statement for prompt for new employee
 addEmployees = confirm("Add new scrub");
-
+}
 // return roster data
 return employeeRoster;
 
@@ -38,12 +43,12 @@ return employeeRoster;
 
 
 // Display the average salary
-const displayAverageSalary = function(employeesArray) {
+const displayAverageSalary = function(employeesRoster) {
   // TODO: Calculate and display the average salary
 }
 
 // Select a random employee
-const getRandomEmployee = function(employeesArray) {
+const getRandomEmployee = function(employeesRoster) {
   // TODO: Select and display a random employee
 }
 
