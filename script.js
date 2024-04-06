@@ -1,11 +1,10 @@
 
 // Get a reference to the #add-employees-btn element
 const addEmployeesBtn = document.querySelector('#add-employees-btn');
-const employeeRoster = [];
+const employeesRoster = [];
 // Collect employee data
 const collectEmployees = function() {
-// prompt for first name variable to store into ma
-
+// prompt for inormation to be stored into array
 
 let addEmployees = true;
 
@@ -29,14 +28,14 @@ let employee = {
 };
 
 // push employee info into predefined array
-employeeRoster.push(employee)
+employeesRoster.push(employee)
 
 // add conditional statement for prompt for new employee
-const continueAdding = confirm("Add new scrub");
+const continueAdding = confirm("Add new Employee");
 addEmployees = continueAdding
 }
 // return roster data
-return employeeRoster;
+return employeesRoster;
 
 
 }
@@ -55,19 +54,19 @@ const salaryAvg = totalSalarySum / employeesRoster.length;
 console.log(`Average of employee salary: ${salaryAvg}`);
 return salaryAvg;
 
+
 }
-
-
-
-
-
-
 
 
 // Select a random employee
 const getRandomEmployee = function(employeesRoster) {
-  // TODO: Select and display a random employee
+// TODO: Select and display a random employee
+const randomIndex = Math.floor(Math.random() * employeesRoster.length)
+const randomEmployee = employeesRoster[randomIndex];
+console.log(randomEmployee);
+
 }
+
 
 /*
   ====================
